@@ -28,9 +28,15 @@ function paintShows() {
   let htmlCode = `<ul>`;
   for (let i = 0; i < shows.length; i++) {
     htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
+    /*if (isfavorite === true) {
+      htmlCode += `<li class="shows__item js-shows-item shows__item--favorite" id="${i}">`;
+    }else{
+      htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
+    };*/
+
     htmlCode += `<h2 class="shows__name">${shows[i].show.name}</h2>`;
-    debugger;
-    if (shows[i].show.image.medium === null) {
+
+    if (shows[i].show.image === null) {
       htmlCode += `<img class="image" src="https://via.placeholder.com/210x295/ffffff/666666/?
       text=TV.">`;
     } else {

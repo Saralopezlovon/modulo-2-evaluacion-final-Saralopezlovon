@@ -1,1 +1,17 @@
+.shows__item {
+  list-style: none;
+}
 
+.image {
+  border: 10px solid black;
+}
+
+/*Favorite*/
+
+.shows__item--favorite .shows__image {
+  border: 10px solid yellow;
+}
+
+.shows__item--favorite .shows__name {
+  color: white;
+}

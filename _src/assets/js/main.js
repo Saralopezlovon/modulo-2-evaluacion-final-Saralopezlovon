@@ -17,7 +17,7 @@ const search = function(ev) {
     .then(function(serverData) {
       shows = serverData;
       paintShows();
-      /*listenShows();*/
+      listenShows();
     })
     .catch(function(err) {
       console.log("Error al traer los datos del servidor", err);
@@ -27,15 +27,26 @@ const search = function(ev) {
 function paintShows() {
   let htmlCode = `<ul>`;
   for (let i = 0; i < shows.length; i++) {
-    htmlCode += `<li id="${i}">`;
-    htmlCode += `<h2>${shows[i].show.name}</h2>`;
-    htmlCode += `<img src="${shows[i].show.image.medium}">`;
+    htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
+    htmlCode += `<h2 class="shows__name">${shows[i].show.name}</h2>`;
+    htmlCode += `<img class="image" src="${shows[i].show.image.medium}">`;
     htmlCode += `</li>`;
   }
 
   htmlCode += `</ul>`;
 
   containerElement.innerHTML = htmlCode;
+}
+
+function toggleFavorites() {
+  console.log("comprobando..");
+}
+
+function listenShows() {
+  const showsItems = document.querySelectorAll(".js-shows-item");
+  for (const showsItem of showsItems) {
+    showsItem.addEventListener("click", toggleFavorites);
+  }
 }
 
 btn.addEventListener("click", search);

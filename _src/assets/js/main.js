@@ -29,7 +29,14 @@ function paintShows() {
   for (let i = 0; i < shows.length; i++) {
     htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
     htmlCode += `<h2 class="shows__name">${shows[i].show.name}</h2>`;
-    htmlCode += `<img class="image" src="${shows[i].show.image.medium}">`;
+    debugger;
+    if (shows[i].show.image.medium === null) {
+      htmlCode += `<img class="image" src="https://via.placeholder.com/210x295/ffffff/666666/?
+      text=TV.">`;
+    } else {
+      htmlCode += `<img class="image" src="${shows[i].show.image.medium}">`;
+    }
+
     htmlCode += `</li>`;
   }
 

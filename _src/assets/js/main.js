@@ -8,20 +8,21 @@ const containerFavElement = document.querySelector(".js-container-fav");
 let shows = [];
 let favoritesShows = [];
 
-/*LocalStorage
+/*LocalStorage*/
+
 function setLocalStorage() {
   localStorage.setItem("favoritesShows", JSON.stringify(favoritesShows));
 }
 function getLocalStorage() {
-  const localStorageFavoritesShows = JSON.parse(
-    localStorage.getItem("favoritesShows")
-  );
+  const localStorageFavoritesShowsJSON = localStorage.getItem("favoritesShows");
+  const localStorageFavoritesShows = JSON.parse(localStorageFavoritesShowsJSON);
+
   if (localStorageFavoritesShows !== null) {
     favoritesShows = localStorageFavoritesShows;
-    paintShows();
+    paintFavShows();
     listenShows();
   }
-}*/
+}
 
 const search = function(ev) {
   ev.preventDefault();
@@ -110,6 +111,7 @@ function toggleFavorites(ev) {
       }
     }
   }
+  setLocalStorage();
   paintFavShows();
 }
 
@@ -120,4 +122,5 @@ function listenShows() {
   }
 }
 
+getLocalStorage();
 btn.addEventListener("click", search);

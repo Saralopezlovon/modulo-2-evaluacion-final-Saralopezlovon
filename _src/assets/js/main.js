@@ -38,10 +38,10 @@ function paintFavShows() {
     htmlCode += `<h2 class="shows__name">${favoritesShows[i].show.name}</h2>`;
 
     if (favoritesShows[i].show.image === null) {
-      htmlCode += `<img class="image" src="https://via.placeholder.com/210x295/ffffff/666666/?
+      htmlCode += `<img class="image shows__imagefav" src="https://via.placeholder.com/210x295/ffffff/666666/?
       text=TV.">`;
     } else {
-      htmlCode += `<img class="image" src="${favoritesShows[i].show.image.medium}">`;
+      htmlCode += `<img class="image shows__imagefav" src="${favoritesShows[i].show.image.medium}">`;
     }
 
     htmlCode += `</li>`;
@@ -85,9 +85,12 @@ function toggleFavorites(ev) {
   for (let i = 0; i < shows.length; i++) {
     if (clickedId === shows[i].show.id) {
       favoritesShows.push(shows[i]);
+      paintFavShows();
     } else {
+      /*paintFavShows();*/
     }
   }
+
   console.log(clickedId, favoritesShows);
   paintFavShows();
 }

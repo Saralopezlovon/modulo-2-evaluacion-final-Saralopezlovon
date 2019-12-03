@@ -10,38 +10,44 @@ body {
   justify-content: space-between;
 }
 
-/*Web busccador*/
+/*Web buscador*/
+
+.form {
+  margin-bottom: 7px;
+}
 
 .title {
   font-family: "Lobster", cursive;
-  border: 3px solid green;
   text-align: center;
-  background: #c72c41;
+  background: #2d132c;
   color: white;
   font-weight: normal;
 }
 
 /*Buscador form*/
 
-.form {
-  border: 3px solid red;
+.character {
+  width: 240px;
+  height: 20px;
+}
+
+.find {
+  height: 25px;
 }
 
 /*Contenedor básico*/
 
 .container {
-  border: 3px solid blue;
   display: flex;
   text-align: center;
-  margin-top: 20px;
   background: #2d132c;
   padding-top: 20px;
+  padding-right: 40px;
 }
 
 .shows__item {
   list-style: none;
   display: inline-block;
-  border: 3px solid black;
   padding-top: 1px;
   height: 390px;
   width: 260px;
@@ -51,11 +57,10 @@ body {
 }
 
 .shows__name {
-  border: 3px solid purple;
   color: white;
   font-family: "Caveat", cursive;
-  margin-bottom: 1px;
-  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-top: 15px;
   width: 255px;
 }
 
@@ -69,15 +74,16 @@ body {
   font-family: "Lobster", cursive;
   color: white;
   font-weight: normal;
-  border: 3px solid pink;
+  margin-top: auto;
+  border-bottom: 3px solid pink;
 }
 
 .section-fav {
-  border: 3px solid blueviolet;
+  width: 300px;
+  margin-right: 10px;
 }
 
 .container-fav {
-  border: 3px solid yellow;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -88,21 +94,19 @@ body {
 }
 
 .shows__name-fav {
-  border: 3px solid purple;
   color: white;
   font-family: "Caveat", cursive;
-  margin-bottom: 1px;
+  margin-bottom: 7px;
   margin-top: 8px;
-  width: 255px;
+  width: 190px;
 }
 
 .shows__item-fav {
   list-style: none;
   display: inline-block;
-  border: 3px solid black;
   padding-top: 1px;
-  height: 390px;
-  width: 260px;
+  height: 290px;
+  width: 200px;
   background: #801336;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -116,8 +120,8 @@ body {
   width: 20px;
   margin: auto;
 }
-/*Favorite*/
 
 .shows__imagefav {
   border: 5px solid yellow;
+  height: 200px;
 }

@@ -1,1 +1,1 @@
-.link__adalab:hover {background-color: #099d8d;color: #fff;}.link__github:hover {background-color: #CCC;color: #000;}body {background: url("../images/logo-adalab-80px.png") center center no-repeat #f3f4f5;margin: 0;height: 100vh;}
+.shows__item {list-style: none;}.image {border: 10px solid black;}.shows__imagefav {border: 10px solid yellow;}.shows__item--favorite .shows__name {color: white;}

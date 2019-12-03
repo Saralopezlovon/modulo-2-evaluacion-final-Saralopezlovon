@@ -1,17 +1,108 @@
+/*Body*/
+
+body {
+  background: #c72c41;
+}
+
+/*Web busccador*/
+
+.title {
+  font-family: "Lobster", cursive;
+  border: 3px solid green;
+  text-align: center;
+  background: #c72c41;
+  color: white;
+  font-weight: normal;
+}
+
+/*Buscador form*/
+
+.form {
+  border: 3px solid red;
+}
+
+/*Contenedor básico*/
+
+.container {
+  border: 3px solid blue;
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  background: #2d132c;
+  padding-top: 20px;
+}
+
 .shows__item {
   list-style: none;
+  display: inline-block;
+  border: 3px solid black;
+  padding-top: 1px;
+  height: 390px;
+  width: 260px;
+  background: #801336;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.shows__name {
+  border: 3px solid purple;
+  color: white;
+  font-family: "Caveat", cursive;
+  margin-bottom: 1px;
+  margin-top: 8px;
+  width: 255px;
 }
 
 .image {
-  border: 10px solid black;
+  border: 2px solid gray;
+}
+
+/*Contenedor favorito*/
+
+.title-fav {
+  font-family: "Lobster", cursive;
+  color: white;
+  font-weight: normal;
+  border: 3px solid pink;
+}
+
+.section-fav {
+  border: 3px solid blueviolet;
+}
+
+.container-fav {
+  border: 3px solid yellow;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  background: #2d132c;
+  padding-top: 20px;
+}
+
+.shows__name-fav {
+  border: 3px solid purple;
+  color: white;
+  font-family: "Caveat", cursive;
+  margin-bottom: 1px;
+  margin-top: 8px;
+  width: 255px;
+}
+
+.shows__item-fav {
+  list-style: none;
+  display: inline-block;
+  border: 3px solid black;
+  padding-top: 1px;
+  height: 390px;
+  width: 260px;
+  background: #801336;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 /*Favorite*/
 
 .shows__imagefav {
-  border: 10px solid yellow;
-}
-
-.shows__item--favorite .shows__name {
-  color: white;
+  border: 5px solid yellow;
 }

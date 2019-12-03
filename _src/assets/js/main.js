@@ -44,14 +44,9 @@ const search = function(ev) {
 function paintFavShows() {
   let htmlCode = `<ul>`;
   for (let i = 0; i < favoritesShows.length; i++) {
-    htmlCode += `<li class="shows__item js-shows-item" id="${favoritesShows[i].id}">`;
-    /*if (isfavorite === true) {
-      htmlCode += `<li class="shows__item js-shows-item shows__item--favorite" id="${i}">`;
-    }else{
-      htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
-    };*/
+    htmlCode += `<li class="shows__item-fav js-shows-item" id="${favoritesShows[i].id}">`;
 
-    htmlCode += `<h2 class="shows__name">${favoritesShows[i].name}</h2>`;
+    htmlCode += `<h2 class="shows__name-fav">${favoritesShows[i].name}</h2>`;
 
     if (favoritesShows[i].image === null) {
       htmlCode += `<img class="image shows__imagefav" src="https://via.placeholder.com/210x295/ffffff/666666/?
@@ -72,11 +67,6 @@ function paintShows() {
   let htmlCode = `<ul>`;
   for (let i = 0; i < shows.length; i++) {
     htmlCode += `<li class="shows__item js-shows-item" id="${shows[i].show.id}">`;
-    /*if (isfavorite === true) {
-      htmlCode += `<li class="shows__item js-shows-item shows__item--favorite" id="${i}">`;
-    }else{
-      htmlCode += `<li class="shows__item js-shows-item" id="${i}">`;
-    };*/
 
     htmlCode += `<h2 class="shows__name">${shows[i].show.name}</h2>`;
 
@@ -113,6 +103,7 @@ function toggleFavorites(ev) {
   }
   setLocalStorage();
   paintFavShows();
+  listenShows();
 }
 
 function listenShows() {

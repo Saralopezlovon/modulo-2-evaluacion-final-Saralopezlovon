@@ -1,3 +1,9 @@
+/*Hover*/
+
+li:hover {
+  background: orange;
+}
+
 /*Body*/
 
 body {
@@ -119,6 +125,7 @@ body {
   color: #ee4540;
   width: 20px;
   margin: auto;
+  cursor: pointer;
 }
 
 .shows__imagefav {

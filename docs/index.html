@@ -4,25 +4,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Adalab Web Starter Kit</title>
+        <title>Buscador de series</title>
         <link rel="icon" href="./favicon.png" />
         <link rel="stylesheet" href="./assets/css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Lobster|Pacifico&display=swap"
+        rel="stylesheet" />
     </head>
     
     <body>
-        <main class="page__main"></main>
-        
-<h1 class="title">Buscador de series</h1>
+        <main class="page__main">
+             <h1 class="title">Buscador de series</h1>
 
-        <form class="form">
-            <input class="character js-character" type="text" value="" />
-            <button class="find js-find">Search</button>
-        </form>
-        <div class="container js-container"></div>
-        
-<h2>Series favoritas:</h2>
+            <form class="form">
+                <input class="character js-character" type="text" value="" />
+                <button class="find js-find">Search</button>
+            </form>
+            <div class="global-container">
+                <div class="container js-container"></div>
+                <div class="section-fav">
+                     <h2 class="title-fav">Series favoritas:</h2>
 
-        <div class="container-fav js-container-fav"></div>
+                    <div class="container-fav js-container-fav"></div>
+                </div>
+            </div>
+        </main>
         <script src="./assets/js/main.js"></script>
     </body>
 

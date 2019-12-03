@@ -4,6 +4,12 @@ body {
   background: #c72c41;
 }
 
+.global-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
 /*Web busccador*/
 
 .title {
@@ -78,6 +84,7 @@ body {
   margin-top: 20px;
   background: #2d132c;
   padding-top: 20px;
+  padding-right: 60px;
 }
 
 .shows__name-fav {

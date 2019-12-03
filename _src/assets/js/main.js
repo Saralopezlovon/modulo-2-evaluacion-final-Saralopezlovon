@@ -54,7 +54,7 @@ function paintFavShows() {
     } else {
       htmlCode += `<img class="image shows__imagefav" src="${favoritesShows[i].image.medium}">`;
     }
-
+    htmlCode += `<div class="button-remove js-shows-item">X</div>`;
     htmlCode += `</li>`;
   }
 

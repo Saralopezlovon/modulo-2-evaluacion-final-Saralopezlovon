@@ -1,5 +1,7 @@
 "use strict";
 
+/*Dates*/
+
 const characterElement = document.querySelector(".js-character");
 const btn = document.querySelector(".js-find");
 const containerElement = document.querySelector(".js-container");
@@ -24,6 +26,8 @@ function getLocalStorage() {
   }
 }
 
+/*ServerData*/
+
 const search = function(ev) {
   ev.preventDefault();
 
@@ -40,6 +44,8 @@ const search = function(ev) {
       console.log("Error al traer los datos del servidor", err);
     });
 };
+
+/*Paint-Favorites-shows*/
 
 function paintFavShows() {
   let htmlCode = `<ul>`;
@@ -63,6 +69,8 @@ function paintFavShows() {
   containerFavElement.innerHTML = htmlCode;
 }
 
+/*Paint-shows*/
+
 function paintShows() {
   let htmlCode = `<ul>`;
   for (let i = 0; i < shows.length; i++) {
@@ -85,6 +93,8 @@ function paintShows() {
   containerElement.innerHTML = htmlCode;
 }
 
+/*Toggle*/
+
 function toggleFavorites(ev) {
   const clickedId = parseInt(ev.currentTarget.id);
   const index = favoritesShows.findIndex(function(show, index) {
@@ -105,6 +115,8 @@ function toggleFavorites(ev) {
   paintFavShows();
   listenShows();
 }
+
+/*Listen*/
 
 function listenShows() {
   const showsItems = document.querySelectorAll(".js-shows-item");

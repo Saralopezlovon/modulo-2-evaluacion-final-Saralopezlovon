@@ -6,6 +6,7 @@ const characterElement = document.querySelector(".js-character");
 const btn = document.querySelector(".js-find");
 const containerElement = document.querySelector(".js-container");
 const containerFavElement = document.querySelector(".js-container-fav");
+const button = document.querySelector(".js-button");
 
 let shows = [];
 let favoritesShows = [];
@@ -49,6 +50,7 @@ const search = function(ev) {
 
 function paintFavShows() {
   let htmlCode = `<ul>`;
+
   for (let i = 0; i < favoritesShows.length; i++) {
     htmlCode += `<li class="shows__item-fav js-shows-item" id="${favoritesShows[i].id}">`;
 
@@ -85,6 +87,7 @@ function paintShows() {
       htmlCode += `<img class="image" src="${shows[i].show.image.medium}">`;
     }
 
+    htmlCode += `<h3 class="shows__status">${shows[i].show.status}</h3>`;
     htmlCode += `</li>`;
   }
 
@@ -125,5 +128,12 @@ function listenShows() {
   }
 }
 
+function logfavorites() {
+  for (let i = 0; i < favoritesShows.length; i++) {
+    console.log(favoritesShows[i].name);
+  }
+}
+
 getLocalStorage();
 btn.addEventListener("click", search);
+button.addEventListener("click", logfavorites);
